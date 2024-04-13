@@ -1,6 +1,6 @@
 from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(name)
 
 rawhtml = """
 <html>
@@ -31,14 +31,14 @@ rawhtml = """
 </html>
 """
 
-@app.route('/stream')
-def player():
-  vid_url = request.args.get('url')
-  return rawhtml.replace("{video_url}", f"{vid_url}")
-
 @app.route('/')
 def hello_world():
-    return "<h1>Site Running</h1>"
+    return rawhtml
 
-if __name__ == "__main__":
+if name == "main":
     app.run()
+       
+  
+   
+
+
