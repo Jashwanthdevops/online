@@ -24,9 +24,6 @@ jobs:
       - name: Run tests
         run: pytest
 
-      - name: 🔨 Build with Maven
-        run: mvn clean package -DskipTests
-
       - name: SonarQube Analysis
         run: |
          mvn sonar:sonar \
